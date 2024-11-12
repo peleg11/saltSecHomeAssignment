@@ -16,6 +16,8 @@ export const Search = () => {
 
   const { filterItem } = useDataContext();
 
+  const disabled = !query && !piiOnly;
+
   return (
     <SearchWrapper>
       <InputWrapper>
@@ -40,7 +42,16 @@ export const Search = () => {
         <Button $primary onClick={() => filterItem(query, piiOnly)}>
           Apply Filters
         </Button>
-        <ResetButton>Reset Filters</ResetButton>
+        <ResetButton
+          disabled={disabled}
+          onClick={() => {
+            setQuery("");
+            setPiiOnly(false);
+            filterItem("", false);
+          }}
+        >
+          Reset Filters
+        </ResetButton>
       </BtnsWrapper>
     </SearchWrapper>
   );

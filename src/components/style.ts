@@ -48,7 +48,8 @@ export const ResetButton = styled(Button)`
   background-color: transparent;
   color: ${({ disabled }: ButtonProps) => (disabled ? "#D5D4D8" : "#3D3D3D")};
   &:hover {
-    border: 1px solid #3d3d3d;
+    border: ${({ disabled }: ButtonProps) =>
+      disabled ? "none" : "1px solid #3d3d3d"};
     background-color: transparent;
   }
   transition: border 0.5s ease;
