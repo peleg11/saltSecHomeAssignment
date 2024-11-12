@@ -8,8 +8,6 @@ interface Props {
 }
 
 export const Content = ({ activeTab }: Props) => {
-  // state of filters
-
   return (
     <MainContentWrapper>
       <Search />

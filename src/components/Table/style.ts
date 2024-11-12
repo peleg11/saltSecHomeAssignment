@@ -6,6 +6,7 @@ export const TableWrapper = styled.div`
   border: 1px solid #ded8e8;
   border-radius: 6px;
   overflow: hidden;
+  margin-top: 4px;
 `;
 
 export const IconButton = styled.button`
